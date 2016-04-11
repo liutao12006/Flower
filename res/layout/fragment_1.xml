@@ -1,0 +1,341 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+    
+     <com.example.view.PullToRefreshView
+        android:id="@+id/main_pull_refresh_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="4dip"
+        android:layout_weight="1"
+        android:background="#00000000" >
+    
+    <ScrollView  android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+      >
+    
+<LinearLayout  
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="140dip"
+        >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35dip"
+            android:layout_gravity="bottom"
+            android:background="#33000000"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中国家庭院校园区域名字体现"
+                android:textColor="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:gravity="center" >
+
+                <View
+                    android:id="@+id/v_dot0"
+                    style="@style/dot_style"
+                    android:background="@drawable/dot_focused" />
+
+                <View
+                    android:id="@+id/v_dot1"
+                    style="@style/dot_style" />
+
+                <View
+                    android:id="@+id/v_dot2"
+                    style="@style/dot_style" />
+
+                <View
+                    android:id="@+id/v_dot3"
+                    style="@style/dot_style" />
+
+                <View
+                    android:id="@+id/v_dot4"
+                    style="@style/dot_style" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    
+<!-- 个人中心 -->    
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" >
+
+        <LinearLayout
+            android:id="@+id/layout_my_focus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ImageView07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:onClick="imageClick"
+                android:src="@drawable/qiandao" />
+
+            <TextView
+                android:id="@+id/TextView07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="签到"
+                android:textColor="#1C1C1C"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_logistics"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ImageView06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:onClick="imageClick"
+                android:src="@drawable/choujiang" />
+
+            <TextView
+                android:id="@+id/TextView05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="抽奖"
+                android:textColor="#1C1C1C"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_top_up"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ImageView05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:onClick="imageClick"
+                android:src="@drawable/meizhuang" />
+
+            <TextView
+                android:id="@+id/TextView06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="皮肤测试"
+                android:textColor="#1C1C1C"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_film"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ImageView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="imageClick"
+                android:src="@drawable/yaoqing" />
+
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邀请好友"
+                android:textColor="#1C1C1C"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp" >
+        <ImageView 
+             android:layout_width="wrap_content"
+             android:layout_height="50dp"
+             android:padding="5dp"
+             android:background="#FFB6C1"
+             android:src="@drawable/yaoqing"/>
+         <com.example.taobaohead.headview.ScrollTopView
+        android:id="@+id/mytaobao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:orientation="vertical" />
+       
+    </LinearLayout>
+
+</LinearLayout>
+   
+<!-- 个人中心下的三个滚动菜单 -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+    <ImageView
+        android:id="@+id/imageView1_home_boye_list_view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/yaoqing" />
+    <HorizontalScrollView  
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp">
+    <GridView 
+        android:id="@+id/gridview1_home_boye_list_view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+        
+    </GridView>
+    </LinearLayout>
+    </HorizontalScrollView>
+  </LinearLayout>
+</LinearLayout>
+<!--第二个滚动菜单 -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+    <ImageView
+        android:id="@+id/imageView2_home_boye_list_view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/yaoqing" />
+    <HorizontalScrollView  
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp">
+    <GridView 
+        android:id="@+id/gridview2_home_boye_list_view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+        
+    </GridView>
+    </LinearLayout>
+    </HorizontalScrollView>
+  </LinearLayout>
+</LinearLayout>
+<!-- 第三个 -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+    <ImageView
+        android:id="@+id/imageView3_home_boye_list_view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/yaoqing" />
+    <HorizontalScrollView  
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp">
+    <GridView 
+        android:id="@+id/gridview3_home_boye_list_view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+        
+    </GridView>
+    </LinearLayout>
+    </HorizontalScrollView>
+  </LinearLayout>
+</LinearLayout>
+<!-- 下面的gridview gridview listview 和scrollview嵌套使用时  会出现滑动冲突和gridview 和listview 显示不出来 或显示不全  必须重写gridview的onMeasure（）方法-->
+    <com.example.view.MyGridView android:id="@+id/home_mainGridView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:numColumns="2"
+   />
+    
+  
+    <ListView 
+        android:id="@+id/home_mainListView"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#00000000"  
+        android:dividerHeight="0dip" />
+    <!-- 
+    <com.example.view.MyListView
+        android:id="@+id/home_mainListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+      --> 
+      <TextView
+                     android:layout_width="fill_parent"
+                     android:layout_height="44dp"
+                     android:layout_weight="0" />  
+</LinearLayout>
+
+</ScrollView>
+ </com.example.view.PullToRefreshView>
+
+</LinearLayout>
